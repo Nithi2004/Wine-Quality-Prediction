@@ -28,7 +28,7 @@ const InputForm = ({ setPrediction }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://127.0.0.1:5000/predict", {
+            const response = await axios.post("https://wine-quality-prediction-w9k1.onrender.com/predict", {
                 features,
             });
             setPrediction(response.data.prediction);
